@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:mlearning/model/data_course.dart';
+import 'package:mlearning/model/Course.dart';
+import 'package:mlearning/routing/constanta_routing.dart';
+//import 'package:mlearning/model/data_course.dart';
 import 'package:mlearning/screens/theory/theory_screen.dart';
 import 'package:mlearning/utils/constanta_colors.dart';
 import 'package:mlearning/utils/size_config.dart';
 
 class CourseScreen extends StatelessWidget {
+  var courses = new List<Course>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,14 +35,14 @@ class CourseScreen extends StatelessWidget {
               child: Column(
                 children: [
                   ...List.generate(
-                    dataCourse.length,
+                 courses.length,
                     (index) => GestureDetector(
                       onTap: () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
                                 builder: (_) => TheoryScreen(
-                                      theoryList: dataCourse[index].theryList,
+                                     // theoryList: dataCourse[index].theryList,
                                     )));
                       },
                       child: Container(
@@ -56,8 +59,7 @@ class CourseScreen extends StatelessWidget {
                               horizontal: getProportionateScreenWidth(24.0)),
                           child: Align(
                             alignment: Alignment.centerLeft,
-                            child: Text(
-                              dataCourse[index].title,
+                            child: Text(courses[index].materi,
                               style: TextStyle(color: kText1, fontSize: 16.0),
                             ),
                           ),
