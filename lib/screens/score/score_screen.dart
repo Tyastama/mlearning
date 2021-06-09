@@ -6,7 +6,7 @@ import 'package:mlearning/utils/size_config.dart';
 class ScoreScreen extends StatelessWidget {
   final int score;
 
-  const ScoreScreen({Key key, this.score}) : super(key: key);
+  const ScoreScreen({Key? key, required this.score}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

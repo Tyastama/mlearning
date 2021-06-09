@@ -3,7 +3,7 @@ class Question {
   final bool isAnswer;
   final String answer;
 
-  Question({this.title, this.isAnswer, this.answer});
+  Question({required this.title, required this.isAnswer, required this.answer});
 }
 
 List<Question> questionsList = [

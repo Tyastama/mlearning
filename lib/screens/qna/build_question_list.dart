@@ -5,7 +5,7 @@ import 'package:mlearning/utils/size_config.dart';
 
 class BuildQuestionsList extends StatelessWidget {
   const BuildQuestionsList({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override

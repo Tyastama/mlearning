@@ -4,7 +4,7 @@ import 'package:mlearning/utils/size_config.dart';
 
 class BuildEmptyQnA extends StatelessWidget {
   const BuildEmptyQnA({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override

@@ -11,7 +11,7 @@ class DetailQuizScreen extends StatefulWidget {
 }
 
 class _DetailQuizScreenState extends State<DetailQuizScreen> {
-  int selectedRadioTile;
+  late int selectedRadioTile;
 
   @override
   void initState() {
@@ -19,7 +19,7 @@ class _DetailQuizScreenState extends State<DetailQuizScreen> {
     selectedRadioTile = 0;
   }
 
-  setSelectedRadioTile(int val) {
+  setSelectedRadioTile(val) {
     setState(() {
       selectedRadioTile = val;
     });
